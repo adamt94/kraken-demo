@@ -1,4 +1,6 @@
-export default function Home() {
+import '@/styles/globals.css';
+
+export default function HomePage() {
   return (
     <main>
       <div className="home">
