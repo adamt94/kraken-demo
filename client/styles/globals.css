@@ -1,4 +1,18 @@
 /* Octopus Energy brand colours used in the design */
+@import "tailwindcss";
+
+@theme {
+  --color-background: #100030;
+  --color-onBackground: #f0ffff;
+  --color-surface: #180048;
+  --color-onSurface: #f0ffff;
+  --color-primary: #f050f8;
+  --color-onPrimary: #100030;
+  --color-secondary: #600e6b;
+  --color-onSecondary: #f0ffff;
+  --color-tertiary: #a49fc8;
+}
+
 :root {
   --hemocyanin: #180048;
   --ice: #f0ffff;
