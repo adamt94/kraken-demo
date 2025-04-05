@@ -36,6 +36,6 @@
     "jest-environment-jsdom": "^29.7.0",
     "json-graphql-server": "3.2.1",
     "prettier": "^3.5.3",
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.3"
   }
 }
