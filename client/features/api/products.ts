@@ -1,20 +1,20 @@
-import { gql } from "@apollo/client";
+import { gql } from '@apollo/client'
 
 export type ProductType = {
-  id: string;
-  name: string;
-  price: number;
-  height: number;
-  width: number;
-  length: number;
-  model_code: string;
-  colour: string;
-  img_url: string;
-  power: string;
-  quantity: number;
-  description: string;
-  brand: string;
-};
+  id: string
+  name: string
+  price: number
+  height: number
+  width: number
+  length: number
+  model_code: string
+  colour: string
+  img_url: string
+  power: string
+  quantity: number
+  description: string
+  brand: string
+}
 
 export const GET_PRODUCTS = gql`
   query {
@@ -34,7 +34,7 @@ export const GET_PRODUCTS = gql`
       brand
     }
   }
-`;
+`
 
 export const GET_PRODUCT = gql`
   query GetProduct($id: ID!) {
@@ -54,5 +54,4 @@ export const GET_PRODUCT = gql`
       brand
     }
   }
-`;
-
+`

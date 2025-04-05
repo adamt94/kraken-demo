@@ -1,5 +1,5 @@
 /* Octopus Energy brand colours used in the design */
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
   --color-background: #100030;

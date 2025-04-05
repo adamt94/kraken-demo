@@ -1,19 +1,18 @@
-import { ProductType } from '@/features/api/products';
-import { create } from 'zustand';
+import { ProductType } from '@/features/api/products'
+import { create } from 'zustand'
 
 type Item = {
-  id: string;
-  name: string;
-  price: number;
-  image: string;
-  quantity: number;
+  id: string
+  name: string
+  price: number
+  image: string
+  quantity: number
 }
 
 interface BasketStore {
-  basketItems: Item[];
-  basketQuantity: number;
-  addToBasket: (item: Item) => void;
-
+  basketItems: Item[]
+  basketQuantity: number
+  addToBasket: (item: Item) => void
 }
 
 export const useBasketStore = create<BasketStore>((set) => ({
@@ -22,6 +21,6 @@ export const useBasketStore = create<BasketStore>((set) => ({
   addToBasket: (item) =>
     set((state) => ({
       basketItems: [...state.basketItems, item],
-      basketQuantity: state.basketQuantity + 1,
+      basketQuantity: state.basketQuantity + item.quantity,
     })),
-}));
+}))
