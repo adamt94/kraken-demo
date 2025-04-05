@@ -20,11 +20,23 @@ export default async function Product({ id }: ProductProps) {
 
   const { Product } = data;
 
+
+  const specs = [
+    { name: "Brand", value: Product.brand },
+    { name: "Model Code", value: Product.model_code },
+    { name: "Colour", value: Product.colour },
+    { name: "Height", value: Product.height },
+    { name: "Width", value: Product.width },
+    { name: "Length", value: Product.length },
+  ];
+
+
+
   return (
     <>
       <ProductCard title={Product.name} subtitle={Product.power} image={Product.img_url} price={Product.price} />
       <ProductDescription description={Product.description} />
-      <ProductSpec />
+      <ProductSpec data={specs} />
     </>
   );
 }

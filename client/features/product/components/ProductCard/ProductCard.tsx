@@ -40,7 +40,7 @@ export const ProductCard = ({ image, title, subtitle, price }: ProductCardProps)
       <div className="lg:col-span-3 flex flex-col">
         <div className="space-y-2 mb-6">
           <h1 className="text-4xl md:text-5xl leading-13">{title}</h1>
-          <p className="text-onBackground text-xl">{subtitle}</p>
+          <p className="text-tertiary text-xl">{subtitle}</p>
         </div>
         <div className="flex flex-row md:flex-row justify-between items-end gap-4 mb-6">
           <div className="text-3xl md:text-4xl font-bold">£{price}</div>
