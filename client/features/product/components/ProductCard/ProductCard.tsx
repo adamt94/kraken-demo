@@ -4,8 +4,11 @@ import Image from "next/image"
 import { QuantityInput } from "../QuantityInput/QuantityInput";
 import { Button } from "@/components/Button/Button";
 import { fakeAddProductRequest } from "@/features/api/add-product";
+import { useBasketStore } from "@/store/basketStore";
+import { useState } from "react";
 
 type ProductCardProps = {
+  id: string;
   image: string;
   title: string;
   subtitle: string;
@@ -13,11 +16,14 @@ type ProductCardProps = {
 }
 
 
-export const ProductCard = ({ image, title, subtitle, price }: ProductCardProps) => {
+export const ProductCard = ({ id, image, title, subtitle, price }: ProductCardProps) => {
+  const [quantity, setQuantity] = useState(1);
+  const { addToBasket } = useBasketStore();
 
   const handleClick = async () => {
     try {
       await fakeAddProductRequest("");
+      addToBasket({ id, image, name: title, price, quantity: 1 });
     } catch (error) {
       console.error("Error adding product:", error);
     }
@@ -46,7 +52,7 @@ export const ProductCard = ({ image, title, subtitle, price }: ProductCardProps)
           <div className="text-3xl md:text-4xl font-bold">£{price}</div>
           <div className="flex flex-col items-center gap-2">
             <span className="text-onBackground text-sm">Qty</span>
-            <QuantityInput />
+            <QuantityInput quantity={quantity} onChange={setQuantity} />
           </div>
         </div>
         <Button

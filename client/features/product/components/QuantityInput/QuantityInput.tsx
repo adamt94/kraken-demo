@@ -3,18 +3,19 @@ import { Button } from "@/components/Button/Button";
 import { useState } from "react";
 
 type QuantityInputProps = {
-  initialValue?: number;
+  quantity: number;
+  onChange: (quantity: number) => void;
+
 };
 
-export const QuantityInput = ({ initialValue = 1 }: QuantityInputProps) => {
-  const [quantity, setQuantity] = useState(initialValue);
+export const QuantityInput = ({ quantity, onChange }: QuantityInputProps) => {
 
   const handleIncrement = () => {
-    setQuantity(quantity + 1);
+    onChange(quantity + 1);
   };
 
   const handleDecrement = () => {
-    setQuantity(quantity - 1);
+    onChange(quantity - 1);
   };
   return (
 

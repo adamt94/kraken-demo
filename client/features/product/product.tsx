@@ -34,7 +34,7 @@ export default async function Product({ id }: ProductProps) {
 
   return (
     <>
-      <ProductCard title={Product.name} subtitle={Product.power} image={Product.img_url} price={Product.price} />
+      <ProductCard id={Product.id} title={Product.name} subtitle={Product.power} image={Product.img_url} price={Product.price} />
       <ProductDescription description={Product.description} />
       <ProductSpec data={specs} />
     </>
