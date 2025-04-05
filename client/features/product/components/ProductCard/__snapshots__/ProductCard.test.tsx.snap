@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductCard renders correctly 1`] = `
+<div>
+  <div
+    class="md:grid md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12"
+  >
+    <div
+      class="rounded-lg p-4 mb-6 md:mb-0 lg:col-span-2"
+    >
+      <div
+        class="flex justify-center"
+      >
+        <img
+          alt="Test Product"
+          class="object-contain rounded-3xl"
+          data-nimg="1"
+          decoding="async"
+          height="500"
+          src="/_next/image?url=https%3A%2F%2Fexample.com%2Fimage.jpg&w=1080&q=75"
+          srcset="/_next/image?url=https%3A%2F%2Fexample.com%2Fimage.jpg&w=640&q=75 1x, /_next/image?url=https%3A%2F%2Fexample.com%2Fimage.jpg&w=1080&q=75 2x"
+          style="color: transparent;"
+          width="500"
+        />
+      </div>
+    </div>
+    <div
+      class="lg:col-span-3 flex flex-col"
+    >
+      <div
+        class="space-y-2 mb-6"
+      >
+        <h1
+          class="text-4xl md:text-5xl leading-13"
+        >
+          Test Product
+        </h1>
+        <p
+          class="text-onBackground text-xl"
+        >
+          This is a test product
+        </p>
+      </div>
+      <div
+        class="flex flex-row md:flex-row justify-between items-end gap-4 mb-6"
+      >
+        <div
+          class="text-3xl md:text-4xl font-bold"
+        >
+          £
+          19.99
+        </div>
+        <div
+          class="flex flex-col items-center gap-2"
+        >
+          <span
+            class="text-onBackground text-sm"
+          >
+            Qty
+          </span>
+          <div
+            class="flex items-center"
+          >
+            <button
+              class="inline-flex cursor-pointer items-center justify-center gap-2 whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-onPrimary hover:bg-primary/90 h-10 w-10 rounded-xl text-xl"
+              disabled=""
+            >
+              -
+            </button>
+            <span
+              class="mx-3 text-2xl w-4 text-center"
+            >
+              1
+            </span>
+            <button
+              class="inline-flex cursor-pointer items-center justify-center gap-2 whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-onPrimary hover:bg-primary/90 h-10 w-10 rounded-xl text-xl"
+            >
+              +
+            </button>
+          </div>
+        </div>
+      </div>
+      <button
+        class="inline-flex cursor-pointer items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-onPrimary hover:bg-primary/90 h-10 px-4 py-6 text-lg"
+      >
+        Add to cart
+      </button>
+    </div>
+  </div>
+</div>
+`;

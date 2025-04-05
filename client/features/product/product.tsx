@@ -2,6 +2,8 @@ import client from '@/lib/apollo-client';
 import '@/styles/globals.css';
 import { GET_PRODUCT, ProductType } from '../api/products';
 import { ProductCard } from './components/ProductCard/ProductCard';
+import { ProductDescription } from './components/ProductDescription/ProductDescription';
+import { ProductSpec } from './components/ProductSpec/ProductSpec';
 
 
 type ProductProps = {
@@ -19,6 +21,10 @@ export default async function Product({ id }: ProductProps) {
   const { Product } = data;
 
   return (
-    <ProductCard title={Product.name} subtitle={Product.power} image={Product.img_url} price={Product.price} />
+    <>
+      <ProductCard title={Product.name} subtitle={Product.power} image={Product.img_url} price={Product.price} />
+      <ProductDescription description={Product.description} />
+      <ProductSpec />
+    </>
   );
 }

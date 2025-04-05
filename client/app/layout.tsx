@@ -11,8 +11,6 @@ export const metadata = {
 
 const RootLayout = async ({ children }: { children: ReactNode }) => {
 
-
-
   return (
     <html lang="en">
       <head>
@@ -37,3 +35,4 @@ const RootLayout = async ({ children }: { children: ReactNode }) => {
 };
 
 export default RootLayout;
+

@@ -1,6 +1,9 @@
+"use client"
+
 import Image from "next/image"
 import { QuantityInput } from "../QuantityInput/QuantityInput";
 import { Button } from "@/components/Button/Button";
+import { fakeAddProductRequest } from "@/features/api/add-product";
 
 type ProductCardProps = {
   image: string;
@@ -11,9 +14,18 @@ type ProductCardProps = {
 
 
 export const ProductCard = ({ image, title, subtitle, price }: ProductCardProps) => {
+
+  const handleClick = async () => {
+    try {
+      await fakeAddProductRequest("");
+    } catch (error) {
+      console.error("Error adding product:", error);
+    }
+  };
+
   return (
-    <div className="md:grid md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
-      <div className="rounded-lg p-4 mb-6 md:mb-0 lg:col-span-2">
+    <div className="px-6 md:grid md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
+      <div className="rounded-lg mb-6 md:mb-0 lg:col-span-2">
         <div className="flex justify-center">
           <Image
             src={image}
@@ -39,6 +51,7 @@ export const ProductCard = ({ image, title, subtitle, price }: ProductCardProps)
         </div>
         <Button
           className="py-6 text-lg"
+          onClick={handleClick}
         >
           Add to cart
         </Button>

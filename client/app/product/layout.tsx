@@ -12,7 +12,7 @@ export const metadata = {
 const ProductLayout = async ({ children }: { children: ReactNode }) => {
 
   return (
-    <div className="p-2">
+    <div className="py-6">
       {children}
     </div>
   );
