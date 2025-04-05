@@ -12,7 +12,7 @@ export default function HomePage() {
         </figure>
         <h1 className="text-primary">Welcome to the Octopus Energy Frontend code test!</h1>
         <p>
-          Get started by visiting the <code>/product</code> URL and editing{" "}
+          Get started by visiting the <code>/product/1</code> URL and editing{" "}
           <code>client/pages/product.js</code>
         </p>
       </div>

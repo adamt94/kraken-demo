@@ -1,11 +1,18 @@
-import Product from '@/features/product/product';
+import Product from '@/features/product/Product';
 import '@/styles/globals.css';
 
-export default function ProductPage() {
+type ProductPageProps = {
+  params: {
+    id: string;
+  };
+};
+
+export default function ProductPage({ params }: ProductPageProps) {
+  const { id } = params;
 
   return (
     <main>
-      <Product />
+      <Product id={id} />
     </main>
   );
 }
