@@ -3,6 +3,7 @@ import { ReactNode } from 'react';
 
 
 import '@/styles/globals.css';
+import { NavBar } from '@/components/NavBar/NavBar';
 
 export const metadata = {
   title: 'Bulletproof React',
@@ -12,9 +13,14 @@ export const metadata = {
 const ProductLayout = async ({ children }: { children: ReactNode }) => {
 
   return (
-    <div className="py-6">
-      {children}
-    </div>
+    <>
+      <header>
+        <NavBar />
+      </header>
+      <div className="py-6">
+        {children}
+      </div>
+    </>
   );
 };
 
