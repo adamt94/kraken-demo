@@ -31,7 +31,7 @@ export default async function Product({ id }: ProductProps) {
       <ProductCard
         id={Product.id}
         title={Product.name}
-        subtitle={Product.power}
+        subtitle={`${Product.power} // Packet of ${Product.quantity}`}
         image={Product.img_url}
         price={Product.price}
       />

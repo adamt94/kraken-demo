@@ -6,6 +6,7 @@ import { Button } from '@/components/Button/Button'
 import { fakeAddProductRequest } from '@/features/api/add-product'
 import { useBasketStore } from '@/store/basketStore'
 import { useState } from 'react'
+import { formatPrice } from '@/util/format-price'
 
 type ProductCardProps = {
   id: string
@@ -58,7 +59,7 @@ export const ProductCard = ({
           <p className='text-tertiary text-xl'>{subtitle}</p>
         </div>
         <div className='flex flex-row md:flex-row justify-between items-end gap-4 mb-6'>
-          <div className='text-3xl md:text-4xl font-bold'>£{price}</div>
+          <div className='text-3xl md:text-4xl'>{formatPrice(price)}</div>
           <div className='flex flex-col items-center gap-2'>
             <span className='text-onBackground text-sm'>Qty</span>
             <QuantityInput quantity={quantity} onChange={setQuantity} />
