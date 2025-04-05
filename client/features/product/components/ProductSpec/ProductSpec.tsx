@@ -7,7 +7,7 @@ type ProductSpecProps = {
 
 export const ProductSpec = ({ data }: ProductSpecProps) => {
   return (
-    <div className='px-6 mt-8'>
+    <section className='px-6 mt-8'>
       <h2 className='text-3xl mb-4'>Specifications</h2>
       <table className='space-y-4 w-full md:max-w-lg'>
         <tbody className=''>
@@ -23,6 +23,6 @@ export const ProductSpec = ({ data }: ProductSpecProps) => {
           ))}
         </tbody>
       </table>
-    </div>
+    </section>
   )
 }

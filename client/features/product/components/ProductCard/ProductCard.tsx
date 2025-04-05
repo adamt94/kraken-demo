@@ -40,7 +40,7 @@ export const ProductCard = ({
   }
 
   return (
-    <div className='px-6 md:grid md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12'>
+    <section className='px-6 md:grid md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12'>
       <div className='rounded-lg mb-6 md:mb-0 lg:col-span-2'>
         <div className='flex justify-center'>
           <Image
@@ -53,8 +53,8 @@ export const ProductCard = ({
           />
         </div>
       </div>
-      <div className='lg:col-span-3 flex flex-col'>
-        <div className='space-y-2 mb-6'>
+      <div className='lg:col-span-3 flex flex-col md:py-6'>
+        <div className='space-y-2 mb-6 md:flex-1'>
           <h1 className='text-4xl md:text-5xl leading-13'>{title}</h1>
           <p className='text-tertiary text-xl'>{subtitle}</p>
         </div>
@@ -69,6 +69,6 @@ export const ProductCard = ({
           {loading ? 'loading...' : 'Add to cart'}
         </Button>
       </div>
-    </div>
+    </section>
   )
 }

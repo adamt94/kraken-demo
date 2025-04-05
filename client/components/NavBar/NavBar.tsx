@@ -11,10 +11,10 @@ export const NavBar = () => {
       <div className='text-white text-xl font-medium'>
         <OctopusLogo className=' h-8 w-48 text-onBackground' />
       </div>
-      <div>
+      <div className='relative'>
         <BasketIcon className='w-7 h-7 text-onBackground' />
         {basketQuantity > 0 && (
-          <span className='absolute right-2 bottom-1 bg-primary text-onBackground w-5 h-5 items-center justify-center rounded-full text-xs flex'>
+          <span className='absolute -right-1 -bottom-3 bg-primary text-onBackground w-5 h-5 items-center justify-center rounded-full text-xs flex'>
             {basketQuantity}
           </span>
         )}
