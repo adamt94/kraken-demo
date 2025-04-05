@@ -19,11 +19,11 @@ export const QuantityInput = ({ initialValue = 1 }: QuantityInputProps) => {
   return (
 
     <div className="flex items-center">
-      <Button onClick={handleDecrement} disabled={quantity == 1} size="icon" className="rounded-xl">
+      <Button onClick={handleDecrement} disabled={quantity == 1} size="icon" className="rounded-xl text-xl">
         -
       </Button>
-      <span className="mx-6 text-2xl">{quantity}</span>
-      <Button onClick={handleIncrement} size="icon" className="rounded-xl">
+      <span className="mx-3 text-2xl w-4 text-center">{quantity}</span>
+      <Button onClick={handleIncrement} size="icon" className="rounded-xl text-xl">
         +
       </Button>
     </div>
