@@ -7,7 +7,7 @@ import OctopusLogo from '../Icons/OctopusLogo'
 export const NavBar = () => {
   const { basketQuantity } = useBasketStore()
   return (
-    <div className='flex justify-between items-center p-4 md:p-6 lg:px-12 lg:py-6  mx-auto relative'>
+    <nav className='flex justify-between items-center p-4 md:p-6 lg:px-12 lg:py-6  mx-auto relative'>
       <div className='text-white text-xl font-medium'>
         <OctopusLogo className=' h-8 w-48 text-onBackground' />
       </div>
@@ -19,6 +19,6 @@ export const NavBar = () => {
           </span>
         )}
       </div>
-    </div>
+    </nav>
   )
 }
