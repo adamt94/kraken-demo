@@ -3,9 +3,11 @@ import { QuantityInput } from "./QuantityInput";
 
 describe('QuantityInput', () => {
   it('should increment quantity when + button is clicked', async () => {
+    const onChange = jest.fn();
     render(
       <QuantityInput
-        initialValue={1}
+        quantity={1}
+        onChange={onChange}
       />
     );
     const incrementButton = screen.getByText('+');
@@ -13,13 +15,16 @@ describe('QuantityInput', () => {
       incrementButton.click();
     });
 
-    expect(screen.getByText('2')).toBeInTheDocument()
-  });
+    expect(onChange).toHaveBeenCalledWith(2);
 
+  });
   it('should decrement quantity when - button is clicked', () => {
+    const onChange = jest.fn();
     render(
       <QuantityInput
-        initialValue={2}
+        quantity={2}
+        onChange={onChange}
+
       />
     );
     const decrementButton = screen.getByText('-');
@@ -27,21 +32,24 @@ describe('QuantityInput', () => {
       decrementButton.click();
     });
 
-    expect(screen.getByText('1')).toBeInTheDocument()
+    expect(onChange).toHaveBeenCalledWith(1);
+
   });
-
   it('should not allow quantity to go below minimum value', () => {
+    const onChange = jest.fn();
     render(
       <QuantityInput
-        initialValue={1}
-        min={1}
+        quantity={1}
+        onChange={onChange}
       />
+
     );
     const decrementButton = screen.getByText('-');
     act(() => {
       decrementButton.click();
     });
 
-    expect(screen.getByText('1')).toBeInTheDocument()
+    expect(onChange).not.toHaveBeenCalled();
+
   });
 });
