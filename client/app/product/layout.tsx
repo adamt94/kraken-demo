@@ -4,6 +4,7 @@ import { ReactNode } from 'react';
 
 import '@/styles/globals.css';
 import { NavBar } from '@/components/NavBar/NavBar';
+import { Footer } from '@/components/Footer/Footer';
 
 export const metadata = {
   title: 'Bulletproof React',
@@ -20,6 +21,7 @@ const ProductLayout = async ({ children }: { children: ReactNode }) => {
       <div className="py-6">
         {children}
       </div>
+      <Footer />
     </>
   );
 };

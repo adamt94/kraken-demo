@@ -15,15 +15,18 @@ type ProductCardProps = {
   price: number;
 }
 
-
 export const ProductCard = ({ id, image, title, subtitle, price }: ProductCardProps) => {
   const [quantity, setQuantity] = useState(1);
+  const [loading, setLoading] = useState(false);
   const { addToBasket } = useBasketStore();
 
   const handleClick = async () => {
     try {
+      setLoading(true);
       await fakeAddProductRequest("");
       addToBasket({ id, image, name: title, price, quantity: 1 });
+      setLoading(false);
+      setQuantity(1);
     } catch (error) {
       console.error("Error adding product:", error);
     }
@@ -59,7 +62,7 @@ export const ProductCard = ({ id, image, title, subtitle, price }: ProductCardPr
           className="py-6 text-lg"
           onClick={handleClick}
         >
-          Add to cart
+          {loading ? "loading..." : "Add to cart"}
         </Button>
 
       </div>
