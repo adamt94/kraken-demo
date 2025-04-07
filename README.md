@@ -58,13 +58,13 @@ You're also welcome to write more tests for other parts of the application - but
 First you'll need to install your dependencies. We've used yarn, if you have another preference feel free to remove the lock file and use what you are comfortable with:
 
 ```sh
-cd client && yarn
+cd client && pnpm
 ```
 
 ## Start the app
 
 ```sh
-yarn dev
+pnpm dev
 ```
 
 This will do two things:
