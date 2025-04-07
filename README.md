@@ -1,3 +1,38 @@
+# Notes
+
+I implemented the product using the product id for the url so navigating
+to /product/1 will get correct product
+
+I added a fake add product request to signal loading state and left 
+the basket as an icon ideally would go to the basket page
+
+Most of the code lives in the `src` folder and looks something like this:
+
+````sh
+src
+|
++-- app               # application layer containing: route pages
+|   +-- page.tsx       # main page component
+|   +-- provider.tsx  # application provider that wraps the entire application with different global providers
+|
++-- components        # shared components used across the entire application
+|
++-- config            # global configurations, exported env variables etc.
+|
++-- features          # feature based modules I used onboarding as the main feature for this app
+|
++-- hooks             # shared hooks used across the entire application
+|
++-- stores            # global state stores
+|
++-- types             # shared types used across the application
+|
++-- styles            # shared  styles such as globals.css
+|
++-- utils             # shared utility functions
+````
+
+
 <img src="https://static.octopuscdn.com/constantine/constantine.svg" alt="Octopus Energy mascot, Constantine" width="100" />
 
 # Octopus Frontend code test
