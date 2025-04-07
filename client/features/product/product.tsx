@@ -4,6 +4,7 @@ import { GET_PRODUCT, ProductType } from '../api/products'
 import { ProductCard } from './components/ProductCard/ProductCard'
 import { ProductDescription } from './components/ProductDescription/ProductDescription'
 import { ProductSpec } from './components/ProductSpec/ProductSpec'
+import { notFound } from 'next/navigation'
 
 type ProductProps = {
   id: string
@@ -16,6 +17,10 @@ export default async function Product({ id }: ProductProps) {
   })
 
   const { Product } = data
+
+  if (!Product) {
+    notFound() // ✅ This triggers the 404 page
+  }
 
   const specs = [
     { name: 'Brand', value: Product.brand },
