@@ -1,10 +1,14 @@
 # Notes
 
-I implemented the product using the product id for the url so navigating
+ - I implemented the product using the product id for the url so navigating
 to /product/1 will get correct product
 
-I added a fake add product request to signal loading state and left 
+- I added a fake add product request to signal loading state and left 
 the basket as an icon ideally would go to the basket page
+
+
+- I update the packages and added tailwind. I also used zustand for keeping
+  the state basket information
 
 Most of the code lives in the `src` folder and looks something like this:
 
