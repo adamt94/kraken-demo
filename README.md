@@ -7,7 +7,7 @@ to /product/1 will get correct product
 the basket as an icon ideally would go to the basket page
 
 
-- I update the packages and added tailwind. I also used zustand for keeping
+- I update the packages and added tailwind for styling. I also used zustand for keeping
   the state basket information
 
 Most of the code lives in the `src` folder and looks something like this:
